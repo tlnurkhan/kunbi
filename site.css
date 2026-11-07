@@ -272,3 +272,21 @@ a.feature-card:hover .more svg{transform:translateX(4px)}
 .program .checks{grid-template-columns:1fr}
 @media (max-width:960px){.price-teaser,.program{grid-template-columns:1fr;gap:28px}.band{padding:30px}}
 @media (max-width:600px){.facts{grid-template-columns:1fr}.band{padding:24px}.price-stats div{flex-direction:column;align-items:flex-start}.price-stats span{text-align:left}}
+
+/* Always-visible navigation */
+.menu-btn{display:none!important}
+@media (max-width:1080px){
+  .nav nav,.nav nav.open{display:flex;position:static;flex-direction:row;gap:18px;font-size:14.5px;padding:0;border:0;box-shadow:none;background:none}
+  .nav nav a,.nav nav.open a{padding:6px 0;border:0}
+}
+@media (max-width:820px){
+  header .nav{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:0;row-gap:6px}
+  .nav nav,.nav nav.open{order:3;width:100%;overflow-x:auto;gap:8px;padding:4px 0 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .nav nav::-webkit-scrollbar{display:none}
+  .nav nav a,.nav nav.open a{flex:none;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--white);font-size:14px}
+  .nav nav a::after{display:none}
+  .nav nav a[aria-current=page]{background:var(--ink);color:var(--white);border-color:var(--ink)}
+  html{scroll-padding-top:130px}
+}
+.nav nav a[aria-current=page]{color:var(--gold-ink)}
+.nav nav a[aria-current=page]::after{right:0}
